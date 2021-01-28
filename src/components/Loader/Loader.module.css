@@ -1,0 +1,95 @@
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  animation-fill-mode: both;
+}
+
+.small,
+.small:before,
+.small:after {
+  width: 0.8em;
+  height: 0.8em;
+  animation: loadSmall 1.8s infinite ease-in-out;
+}
+
+.large,
+.large:before,
+.large:after {
+  width: 1.6em;
+  height: 1.6em;
+  animation: loadLarge 1.8s infinite ease-in-out;
+}
+
+.loaderWrapper {
+  animation: loadOpacity 1.8s infinite ease-in-out;
+  opacity: 0.4;
+}
+
+.loader {
+  color: #2F9AFF;
+  font-size: 10px;
+  margin: 0 auto 20px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.large:before {
+  left: -2em;
+  animation-delay: -0.32s;
+}
+
+.large:after {
+  left: 2em;
+}
+
+.small:before {
+  left: -1.1em;
+  animation-delay: -0.32s;
+}
+
+.small:after {
+  left: 1.1em;
+}
+
+@keyframes loadLarge {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 1.6em 0 -0.4em;
+  }
+  40% {
+    box-shadow: 0 1.6em 0 0;
+  }
+}
+
+@keyframes loadOpacity {
+  0%,
+  80%,
+  100% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes loadSmall {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0.8em 0 -0.2em;
+  }
+  40% {
+    box-shadow: 0 0.8em 0 0;
+  }
+}
